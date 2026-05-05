@@ -12,17 +12,26 @@ body {
 }
 
 #container {
-    width: 715px;
+    width: 600px;
+    height: 600px;
     background-color: black;
     display: flex;
-    gap: 5px;
-    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 1px;
+    border: 1px solid #000;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    background-color: black;
+    gap: 1px;
+    flex: 1 1 50px;
 }
 
 .square {
-    width: 40px;
-    height: 40px;
     background-color: white;
+    flex: 1 1 50px;
 }
 
 .square:hover {
