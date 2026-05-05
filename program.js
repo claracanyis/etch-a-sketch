@@ -1,6 +1,7 @@
-function createGrid(columns, rows) {
-    const container = document.querySelector("#container");
+const btnSize = document.querySelector("#sizeSetting");
+const container = document.querySelector("#container");
 
+function createGrid(columns, rows) {
     for (let line = 1; line <= rows; line++) {
         const row = document.createElement("div");
         row.classList.add("row");
@@ -14,4 +15,23 @@ function createGrid(columns, rows) {
     
 }
 
-createGrid(30,30);
+createGrid(16,16);
+
+function removeGrid() {
+    const rows = document.querySelectorAll(".row");
+    const squares = document.querySelectorAll(".square");
+    for (let element of squares) {
+        element.remove();
+    }
+    for (let element of rows) {
+        element.remove();
+    }
+}
+
+btnSize.addEventListener('click', function () {
+    let size = Number(prompt('Enter row and column size'));
+    if (Number.isInteger(size) && size > 0 && size <= 100) {
+        removeGrid();
+        createGrid(size,size);
+    }
+})
