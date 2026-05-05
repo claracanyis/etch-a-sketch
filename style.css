@@ -4,6 +4,13 @@
     margin: 0;
 }
 
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 #container {
     width: 715px;
     background-color: black;
@@ -15,5 +22,9 @@
 .square {
     width: 40px;
     height: 40px;
+    background-color: white;
+}
+
+.square:hover {
     background-color: red;
 }
