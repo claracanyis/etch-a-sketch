@@ -33,6 +33,7 @@ btnSize.addEventListener('click', function () {
     if (Number.isInteger(size) && size > 0 && size <= 100) {
         removeGrid();
         createGrid(size,size);
+        changeColorHover();
     } else {
         console.log('ERROR: input is not a number or exceeds range [1,100]');
     }
