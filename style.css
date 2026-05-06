@@ -28,7 +28,7 @@ body {
 
 #sizeSetting:active {
     background-color: rgb(219, 10, 52);
-}
+} 
 
 #container {
     width: 600px;
@@ -51,8 +51,4 @@ body {
 .square {
     background-color: white;
     flex: 1 1 50px;
-}
-
-.square:hover {
-    background-color: red;
 }

@@ -37,3 +37,14 @@ btnSize.addEventListener('click', function () {
         console.log('ERROR: input is not a number or exceeds range [1,100]');
     }
 })
+
+function changeColorHover() {
+    const squares = document.querySelectorAll(".square");
+    for (let square of squares) {
+        square.addEventListener('mouseover', () => {
+            square.setAttribute('style', 'background-color: green');
+        })
+    } 
+}
+
+changeColorHover();
