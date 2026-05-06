@@ -8,6 +8,7 @@ function createGrid(columns, rows) {
         for (let i = 1; i <= columns; i++) {
             const square = document.createElement("div");
             square.classList.add("square");
+            square.classList.add("squareColor1");
             row.appendChild(square);
         }
         container.appendChild(row);
@@ -43,8 +44,11 @@ function changeColorHover() {
     const squares = document.querySelectorAll(".square");
     for (let square of squares) {
         square.addEventListener('mouseover', () => {
-            square.setAttribute('style', 'background-color: green');
-        })
+            let squareClass = square.className;
+            let classNumber = square.className[square.className.length-1];
+            square.classList.remove(squareClass.slice(7,18));
+            square.classList.add(squareClass.slice(7,18) + (parseInt(classNumber) + 1).toString());
+        });
     } 
 }
 

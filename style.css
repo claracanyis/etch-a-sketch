@@ -49,6 +49,25 @@ body {
 }
 
 .square {
-    background-color: white;
     flex: 1 1 50px;
+}
+
+.squareColor1 {
+    background-color: hsl(0, 100%, 100%);
+}
+
+.squareColor2 {
+    background-color: hsl(0, 100%, 75%);
+}
+
+.squareColor3 {
+    background-color: hsl(0, 100%, 50%);
+}
+
+.squareColor4 {
+    background-color: hsl(0, 100%, 25%);
+}
+
+.squareColor5 {
+    background-color: hsl(0, 100%, 0%);
 }
